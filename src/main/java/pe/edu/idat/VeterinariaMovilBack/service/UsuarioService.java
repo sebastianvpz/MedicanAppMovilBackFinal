@@ -60,6 +60,7 @@ public class UsuarioService {
 
         // Verifica si el usuario existe y la contraseña coincide
         if (usuario != null && passwordEncoder.matches(contrasena, usuario.getContrasena())) {
+            usuario.setContrasena(contrasena);
             return usuario;
         }
 
