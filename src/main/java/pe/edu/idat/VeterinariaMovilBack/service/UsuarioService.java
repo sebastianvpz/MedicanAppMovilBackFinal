@@ -44,7 +44,7 @@ public class UsuarioService {
                 .map(usuario -> {
                     usuario.setApellido(nuevoUsuario.getApellido());
                     usuario.setCelular(nuevoUsuario.getCelular());
-                    usuario.setContrasena(nuevoUsuario.getContrasena());
+                    usuario.setContrasena(passwordEncoder.encode(nuevoUsuario.getContrasena()));
                     usuario.setDireccion(nuevoUsuario.getDireccion());
                     usuario.setDni(nuevoUsuario.getDni());
                     usuario.setEmail(nuevoUsuario.getEmail());
